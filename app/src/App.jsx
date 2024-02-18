@@ -12,6 +12,10 @@ function App() {
    <span class="material-symbols-outlined">
 check
 </span>
+<br />
+<h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
     </>
   )
 }
