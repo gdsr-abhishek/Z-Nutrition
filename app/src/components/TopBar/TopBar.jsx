@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from 'react';
+import { ClassNames } from '@emotion/react';
 
 const pages = ['Get Started', 'Food Tracker', 'Pro'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -36,7 +37,7 @@ export default function TopBar(){
     };
     return (
       <>
-       <AppBar position="sticky">
+       <AppBar position="sticky" className='bg-gradient-to-r from-lime-800 to-lime-600'>
         <Container maxWidth="xl">
           <Toolbar disableGutters>      
           <Typography
@@ -156,8 +157,6 @@ export default function TopBar(){
           </Toolbar>
         </Container>
       </AppBar>
-  
-      <br />
       </>
     )
 }

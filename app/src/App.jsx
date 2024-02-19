@@ -1,10 +1,17 @@
-import { useState} from 'react'
+import { Suspense, useState} from 'react'
 import './App.css'
-import TopBar from './components/TopBar/TopBar';
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
+import LandingPage from './components/LandingPage/LandingPage';
 function App() {
  return (
 <>
-<TopBar/>
+
+     <BrowserRouter>
+      <Routes>
+       <Route path="/" element={<Suspense fallback="....loading"> <LandingPage /> </Suspense>} />    
+      </Routes>
+     </BrowserRouter>
+
 </>
  );
 }
