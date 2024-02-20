@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from 'react';
 import { ClassNames } from '@emotion/react';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
 const pages = ['Get Started', 'Food Tracker', 'Pro'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -55,7 +56,7 @@ export default function TopBar(){
                 textDecoration: 'none',
               }}
             >
-               Z-Nutrition
+               ZNutrition
             </Typography>
   
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -89,8 +90,11 @@ export default function TopBar(){
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
+                    <Typography textAlign="center">{page} </Typography> 
+                    if(page === 'Pro'){
+                    <WorkspacePremiumIcon className='text-yellow-500'/>
+                  }
+                    </MenuItem>
                 ))}
               </Menu>
             </Box>
@@ -111,7 +115,7 @@ export default function TopBar(){
                 textDecoration: 'none',
               }}
             >
-              Z-Nutrition
+              ZNutrition
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
@@ -121,6 +125,11 @@ export default function TopBar(){
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
                   {page}
+                  
+                  { page === 'Pro' ?
+                    <WorkspacePremiumIcon className='text-yellow-400'/>:
+                    ''
+                  }
                 </Button>
               ))}
             </Box>
