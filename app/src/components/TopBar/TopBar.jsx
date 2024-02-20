@@ -38,7 +38,7 @@ export default function TopBar(){
     };
     return (
       <>
-       <AppBar position="sticky" className='bg-gradient-to-r from-lime-800 to-lime-600'>
+       <AppBar position="sticky" className='bg-gradient-to-br from-lime-800 to-lime-600'>
         <Container maxWidth="xl">
           <Toolbar disableGutters>      
           <Typography
@@ -91,8 +91,9 @@ export default function TopBar(){
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page} </Typography> 
-                    if(page === 'Pro'){
-                    <WorkspacePremiumIcon className='text-yellow-500'/>
+                    { page === 'Pro' ?
+                    <WorkspacePremiumIcon className='text-yellow-400'/>:
+                    ''
                   }
                     </MenuItem>
                 ))}
@@ -119,7 +120,7 @@ export default function TopBar(){
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
-                <Button
+                <Button className='shadow-sm rounded hover:bg-slate-100  hover:text-lime-500'
                   key={page}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
