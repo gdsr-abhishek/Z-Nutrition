@@ -16,7 +16,7 @@ import { useState } from 'react';
 import { ClassNames } from '@emotion/react';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
-const pages = ['Get Started', 'Food Tracker', 'Pro'];
+const pages = ['TDEE', 'Food Tracker', 'Pro'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 export default function TopBar(){
     const [anchorElNav, setAnchorElNav] = useState(null);
