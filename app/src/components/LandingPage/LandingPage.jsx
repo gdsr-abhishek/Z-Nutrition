@@ -2,6 +2,7 @@
 import TopBar from '../TopBar/TopBar.jsx';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
+import SoupKitchenIcon from '@mui/icons-material/SoupKitchen';
 export default function LandingPage(){
  return(
 <>
@@ -20,7 +21,13 @@ export default function LandingPage(){
         <h1 className='text-3xl'>Optimize your health on the go with our convenient health tracking solution</h1>
     </div>
 </div>
-<div className='bg-gradient-to-br from-lime-800 to-lime-600 p-40 text-center text-yellow-50'>A #4</div>
+<div className='bg-gradient-to-br py-40 from-lime-800 to-lime-600 p-40 text-center text-yellow-50'>
+
+<SoupKitchenIcon className=' py-2 text-slate-50 align-top' sx={{fontSize:60}}/>
+    <div className='m-5  text-slate-50'>
+        <h1 className='text-3xl'>If it's edible, it resides in this space</h1>
+    </div>
+</div>
 <div className='bg-slate-200 py-60 text-center text-slate-500'>A #5</div>
 <div className='bg-gradient-to-br from-lime-800 to-lime-600 p-40 text-center text-yellow-50'>A #6</div>
 <div className='bg-slate-200 py-60 text-center text-slate-500'>A #7</div>
