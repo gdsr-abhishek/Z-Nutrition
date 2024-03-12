@@ -24,14 +24,15 @@ export default function LandingPage(){
 <div className='bg-gradient-to-br py-40 from-lime-800 to-lime-600 p-40 text-center text-yellow-50'>
 
 <SoupKitchenIcon className=' py-2 text-slate-50 align-top' sx={{fontSize:60}}/>
-    <div className='m-5  text-slate-50'>
+    <div className='m-5  text-slate-200'>
         <h1 className='text-3xl'>If it's edible, it resides in this space</h1>
     </div>
 </div>
-<div className='bg-slate-200 py-60 text-center text-slate-500'>A #5</div>
-<div className='bg-gradient-to-br from-lime-800 to-lime-600 p-40 text-center text-yellow-50'>A #6</div>
-<div className='bg-slate-200 py-60 text-center text-slate-500'>A #7</div>
-<div className='bg-green-900 p-40 text-center text-yellow-50'>A #8</div>
+<div className='bg-black p-2 text-center text-yellow-50'><footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Z-Nutrition. All rights reserved.</p>
+        </div>
+    </footer></div>
 </>
  )
 }

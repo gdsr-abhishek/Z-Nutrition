@@ -15,22 +15,29 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from 'react';
 import { ClassNames } from '@emotion/react';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import {useNavigate} from 'react-router-dom'
 
-const pages = ['TDEE', 'Food Tracker', 'Pro'];
+const pages = [
+{path:"/tdee",label:'TDEE'},
+{path:"/tracker",label:'Tracker'} ,
+{path:"/plus",label:'Pro'}
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 export default function TopBar(){
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
-  
+    let navigate = useNavigate();
     const handleOpenNavMenu = (event) => {
       setAnchorElNav(event.currentTarget);
     };
     const handleOpenUserMenu = (event) => {
       setAnchorElUser(event.currentTarget);
     };
-  
+   const navigateToPg = (page)=>{
+     navigate(page);
+   }
     const handleCloseNavMenu = () => {
-      setAnchorElNav(null);
+      setAnchorElNav('tdee');
     };
   
     const handleCloseUserMenu = () => {
@@ -89,9 +96,10 @@ export default function TopBar(){
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page} </Typography> 
-                    { page === 'Pro' ?
+                  <MenuItem key={page.label} onClick={()=>navigateToPg(page.path)} >
+                    
+                    <Typography textAlign="center" >{page.label} </Typography> 
+                    { page.label  === 'Pro' ?
                     <WorkspacePremiumIcon className='text-yellow-400'/>:
                     ''
                   }
